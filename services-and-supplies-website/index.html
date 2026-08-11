@@ -1,194 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover a comprehensive range of professional services including cleaning, plumbing, grass cutting, and quality supplies like clothing, stationery, and fuel.">
-    <meta name="keywords" content="cleaning, plumbing, supplies, grass cutting, stationery, fuel, professional services">
-    <meta name="author" content="Services & Supplies Company">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Services & Supplies</title>
-    <style>
-         body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(to right, #e0eafc, #cfdef3);
-            background-image: url('images/gntholding.jpg');
-            background-size: cover; /* Cover the entire page */
-            background-repeat: repeat;
-            justify-content: center;
-            flex-direction: column;
-            height: 100vh; /* Full height */
-            margin: 0; /* Remove default margin */
-
-        }
-        header {
-            background: #1f1f1f;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #333;
-        }
-        nav a {
-            color: white;
-            padding: 1rem;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            background: #575757;
-            border-radius: 5px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 5vh;
-        }
-        .section {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: #f7f7f7;
-            border-radius: 8px;
-            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
-        }
-        .section h2 {
-            color: #1f1f1f;
-        }
-        .cta {
-            background: #1f1f1f;
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
-            border-radius: 8px;
-            margin-top: 2rem;
-        }
-        .cta a {
-            display: inline-block;
-            background: black;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            border-radius: 4px;
-            margin-top: 1rem;
-        }
-        footer {
-            background: #1f1f1f;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
-        button {
-            background: #1f1f1f;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        .social-icons {
-        display: flex;
-        gap: 1rem;
-        margin: 2rem 0;
-        }
-        .icon-link {
-        display: inline-flex;
-        align-items: center;
-        text-decoration: none;
-        background: #333;
-        color: white;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
-        transition: background 0.3s ease;
-        }
-       .icon-link:hover {
-        background: #575757;
-        }
-       .icon-link i {
-        margin-right: 0.5rem;
-        }
-        button:hover {
-            background: #333;
-        }
-        .contact-container {
-            background: #eaeaea;
-            width: 95%;
-            padding: 2rem;
-            margin-top: 3rem;
-            text-align: left;
-        }
-        .contact-container h2 {
-            color: black;
-            margin-bottom: 1rem;
-        }
-        .contact-details {
-            line-height: 1.8;
-            color: #333;
-        }
-
-    </style>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GNT MAK Holdings — professional cleaning, plumbing and grass cutting services, plus clothing, stationery and fuel supplies in Durban.">
+<meta name="keywords" content="cleaning, plumbing, supplies, grass cutting, stationery, fuel, professional services, Durban, GNT MAK Holdings">
+<meta name="author" content="GNT MAK Holdings">
+<title>GNT MAK Holdings | Services &amp; Supplies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Services & Supplies Website</h1>
-    </header>
-    <nav>
-        <a href="service.html">Services</a>
-        <a href="supplies.html">Supplies</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
-    <div class="container">
-        <section id="intro" class="section">
-            <h2>About Our Website</h2>
-            <p>Explore our extensive range of services and supplies designed to meet your needs. From cleaning and plumbing services to clothing and stationery supplies, we've got you covered!</p>
-        </section>
-        <section id="highlights" class="section">
-            <h2>Why Choose Us?</h2>
-            <ul>
-                <li>Professional and reliable services</li>
-                <li>Quality products for everyday needs</li>
-                <li>Customer-focused solutions</li>
-            </ul>
-        </section>
 
-        <div class="cta">
-            <h2>Get Started Today!</h2>
-            <p>Discover our comprehensive service offerings and explore our wide range of supplies.</p>
-            <a href="service.html">Explore Services</a>
-            <a href="supplies.html">Browse Supplies</a>
+<div class="preloader"><div class="spinner"></div></div>
+<div class="scroll-progress"></div>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="images/company-logo.jpg" alt="GNT MAK Holdings logo">
+      <span class="brand-text"><strong>GNT MAK Holdings</strong><span>Services &amp; Supplies</span></span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="supplies.html">Supplies</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" style="--hero-img:url('images/gntholding.jpg')">
+  <div class="hero-bg"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="container hero-content">
+    <div class="eyebrow"><i class="fas fa-bolt"></i> Trusted Since Day One</div>
+    <h1>Reliable <span class="highlight">Services</span> &amp; Quality <span class="highlight">Supplies</span> Under One Roof</h1>
+    <p>GNT MAK Holdings delivers professional cleaning, plumbing and grass cutting services, alongside clothing, stationery and fuel supplies — built on reliability, quality and customer care.</p>
+    <div class="hero-actions">
+      <a href="service.html" class="btn btn-primary"><i class="fas fa-list-check"></i> Explore Services</a>
+      <a href="supplies.html" class="btn btn-outline"><i class="fas fa-boxes-stacked"></i> Browse Supplies</a>
+    </div>
+    <div class="hero-badges">
+      <div class="hero-badge"><i class="fas fa-shield-halved"></i><div><strong>100%</strong><span>Satisfaction Focus</span></div></div>
+      <div class="hero-badge" style="animation-delay:1s"><i class="fas fa-user-check"></i><div><strong>Trained</strong><span>Professional Staff</span></div></div>
+      <div class="hero-badge" style="animation-delay:2s"><i class="fas fa-truck-fast"></i><div><strong>Fast</strong><span>Reliable Delivery</span></div></div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><i class="fas fa-chevron-down"></i></div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">About Us</div>
+      <h2>One Partner, Every Need Covered</h2>
+      <p>Explore our extensive range of services and supplies designed to meet your needs — from cleaning and plumbing to clothing, stationery and fuel — all delivered with professionalism and care.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="card icon-card reveal">
+        <div class="icon-wrap"><i class="fas fa-broom"></i></div>
+        <h3>Professional &amp; Reliable</h3>
+        <p>Trained staff and consistent quality on every job, every time.</p>
+      </div>
+      <div class="card icon-card reveal reveal-delay-1">
+        <div class="icon-wrap"><i class="fas fa-award"></i></div>
+        <h3>Quality Products</h3>
+        <p>Durable supplies sourced for everyday needs and bulk orders.</p>
+      </div>
+      <div class="card icon-card reveal reveal-delay-2">
+        <div class="icon-wrap"><i class="fas fa-headset"></i></div>
+        <h3>Customer-Focused</h3>
+        <p>Solutions tailored around you, with clear communication throughout.</p>
+      </div>
+      <div class="card icon-card reveal reveal-delay-3">
+        <div class="icon-wrap"><i class="fas fa-leaf"></i></div>
+        <h3>Eco-Conscious</h3>
+        <p>Environmentally friendly options wherever possible.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="grid grid-4">
+      <div class="card stat-card reveal">
+        <div class="num" data-count="150" data-suffix="+">0</div>
+        <div class="label">Happy Clients</div>
+      </div>
+      <div class="card stat-card reveal reveal-delay-1">
+        <div class="num" data-count="6" data-suffix="+">0</div>
+        <div class="label">Service Lines</div>
+      </div>
+      <div class="card stat-card reveal reveal-delay-2">
+        <div class="num" data-count="300" data-suffix="+">0</div>
+        <div class="label">Jobs Completed</div>
+      </div>
+      <div class="card stat-card reveal reveal-delay-3">
+        <div class="num" data-count="100" data-suffix="%">0</div>
+        <div class="label">Commitment</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">What We Do</div>
+      <h2>Our Core Services</h2>
+      <p>Hands-on, dependable services for homes and businesses.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card media-card reveal">
+        <div class="media"><span class="tag">Popular</span><img src="images/cleaning.jpg" alt="Cleaning service"></div>
+        <div class="body">
+          <h3>Cleaning Services</h3>
+          <p>High-quality, eco-friendly cleaning with flexible scheduling.</p>
+          <a href="service.html" class="btn btn-dark btn-sm">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="contact-container">
-            <h2>Contact Us</h2>
-            <div class="contact-details">
-                <p><strong>Phone:</strong> 064 855 6323 | 064 505 2676</p>
-                <p><strong>Email:</strong>info@gntmakholdings.co.za | quotations@gntmakholdings.co.za</p>
-                <p><strong>Address:</strong> 15 Kildare road | Berea | Durban | 4000</p>
-                <p><strong>Working Hours:</strong> Monday - Friday: 8 AM - 4 PM</p>
-            </div>
+      </div>
+      <div class="card media-card reveal reveal-delay-1">
+        <div class="media"><img src="images/grasscutting.jpg" alt="Grass cutting service"></div>
+        <div class="body">
+          <h3>Grass Cutting</h3>
+          <p>Neat, precise lawn care with modern equipment.</p>
+          <a href="service.html" class="btn btn-dark btn-sm">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="card media-card reveal reveal-delay-2">
+        <div class="media"><img src="images/plumbing.jpg" alt="Plumbing service"></div>
+        <div class="body">
+          <h3>Plumbing Services</h3>
+          <p>Expert repairs, installations, and emergency call-outs.</p>
+          <a href="service.html" class="btn btn-dark btn-sm">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
     </div>
-    <div class="social-icons">
-        <a href="mailto:gntmakhanya@gmail.com"target="_blank" class="icon-link">
-            <i class="fas fa-envelope"></i> Email Us
-        </a>
-        <a href="https://facebook.com/Nhlanhla Makhanya" target="_blank" class="icon-link">
-            <i class="fab fa-facebook"></i> Follow on Facebook
-        </a>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">What We Supply</div>
+      <h2>Featured Supplies</h2>
+      <p>Bulk-ready, quality supplies for individuals and businesses.</p>
     </div>
-    <footer>
-        <p>&copy; 2025 Services & Supplies. All Rights Reserved.</p>
-    </footer>
+    <div class="grid grid-3">
+      <div class="card media-card reveal">
+        <div class="media"><img src="images/clothingsupplies.jpg" alt="Clothing supplies"></div>
+        <div class="body">
+          <h3>Clothing Supplies</h3>
+          <p>Durable fabrics, wide sizing and custom branding.</p>
+          <a href="supplies.html" class="btn btn-dark btn-sm">View Details <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="card media-card reveal reveal-delay-1">
+        <div class="media"><img src="images/fuelsupplies.jpg" alt="Fuel supplies"></div>
+        <div class="body">
+          <h3>Fuel Supplies</h3>
+          <p>Reliable bulk fuel with prompt delivery.</p>
+          <a href="supplies.html" class="btn btn-dark btn-sm">View Details <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="card media-card reveal reveal-delay-2">
+        <div class="media"><img src="images/stationerysupplies.jpg" alt="Stationery supplies"></div>
+        <div class="body">
+          <h3>Stationery Supplies</h3>
+          <p>Office &amp; school essentials, delivered fast.</p>
+          <a href="supplies.html" class="btn btn-dark btn-sm">View Details <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Testimonials</div>
+      <h2>What Our Clients Say</h2>
+    </div>
+    <div class="testimonials reveal">
+      <button class="testi-arrow prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+      <div class="testi-track">
+        <div class="testi-slide active">
+          <i class="fas fa-quote-left"></i>
+          <p>"GNT MAK Holdings has kept our offices spotless for over a year. Professional, punctual, and always thorough."</p>
+          <div class="testi-name">Thandiwe N.</div>
+          <div class="testi-role">Office Manager, Durban</div>
+        </div>
+        <div class="testi-slide">
+          <i class="fas fa-quote-left"></i>
+          <p>"Fast plumbing call-out that actually fixed the problem the first time. Fair pricing and great communication."</p>
+          <div class="testi-name">Sipho M.</div>
+          <div class="testi-role">Homeowner, Berea</div>
+        </div>
+        <div class="testi-slide">
+          <i class="fas fa-quote-left"></i>
+          <p>"We order our stationery supplies in bulk every quarter — always on time and great quality."</p>
+          <div class="testi-name">Lindiwe K.</div>
+          <div class="testi-role">School Administrator</div>
+        </div>
+      </div>
+      <button class="testi-arrow next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+      <div class="testi-dots"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <h2>Get Started Today!</h2>
+      <p>Discover our comprehensive service offerings and explore our wide range of supplies — reach out for a free, no-obligation quote.</p>
+      <div class="cta-actions">
+        <a href="service.html" class="btn btn-primary">Explore Services</a>
+        <a href="contact.html" class="btn btn-outline">Request a Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" style="margin-bottom:1rem;">
+          <img src="images/company-logo.jpg" alt="GNT MAK Holdings logo">
+          <span class="brand-text"><strong>GNT MAK Holdings</strong><span>Services &amp; Supplies</span></span>
+        </a>
+        <p>Your one-stop solution for professional services and quality supplies in Durban.</p>
+        <div class="newsletter">
+          <input type="email" placeholder="Your email address" aria-label="Newsletter email">
+          <button type="button"><i class="fas fa-paper-plane"></i></button>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="supplies.html">Supplies</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="service.html">Cleaning</a></li>
+          <li><a href="service.html">Grass Cutting</a></li>
+          <li><a href="service.html">Plumbing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fas fa-phone"></i> 064 855 6323 / 064 505 2676</li>
+          <li><i class="fas fa-envelope"></i> info@gntmakholdings.co.za</li>
+          <li><i class="fas fa-location-dot"></i> 15 Kildare Road, Berea, Durban, 4000</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="footer-year"></span> GNT MAK Holdings — Services &amp; Supplies. All Rights Reserved.</p>
+      <div class="footer-socials">
+        <a href="mailto:gntmakhanya@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="tel:0648556323" aria-label="Call"><i class="fas fa-phone"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="floating-actions">
+  <a href="https://wa.me/27648556323" target="_blank" rel="noopener" class="fab fab-whatsapp" aria-label="WhatsApp us"><i class="fab fa-whatsapp"></i></a>
+  <a href="tel:0648556323" class="fab fab-call" aria-label="Call us"><i class="fas fa-phone"></i></a>
+  <button class="fab fab-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>

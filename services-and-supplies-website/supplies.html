@@ -1,110 +1,203 @@
-<!-- supplies.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Supplies</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background: #f3f3f3;
-        }
-        header {
-            background: #1f1f1f;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav {
-            background: #333;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0.5rem;
-            padding: 1rem;
-            text-decoration: none;
-            display: inline-block;
-        }
-        nav a:hover {
-            background: #575757;
-            border-radius: 5px;
-        }
-        .supply-section {
-            display: flex;
-            gap: 2rem;
-            margin: 2rem;
-            background: #ffffff;
-            border-radius: 7px;
-            padding: 1rem;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .supply-section img {
-            max-width: 200px;
-            border-radius: 8px;
-        }
-        .supply-content {
-            flex: 1;
-        }
-        h2 {
-            color: #1f1f1f;
-        }
-        ul {
-            list-style-type: square;
-        }
-    
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Clothing, fuel and stationery supplies from GNT MAK Holdings — bulk-ready, reliable, and delivered on time.">
+<title>Our Supplies | GNT MAK Holdings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Our Supplies</h1>
-    </header>
+
+<div class="preloader"><div class="spinner"></div></div>
+<div class="scroll-progress"></div>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="images/company-logo.jpg" alt="GNT MAK Holdings logo">
+      <span class="brand-text"><strong>GNT MAK Holdings</strong><span>Services &amp; Supplies</span></span>
+    </a>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="service.html">Services</a>
-        <a href="contact.html">Contact Us</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="supplies.html" class="active">Supplies</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
-    
-    <div class="supply-section">
-        <img src="images/clothingsupplies.jpg" alt="Clothing Supply">
-        <div class="service-content">
-            <h2>Clothing Supplies</h2>
-        <ul>
-            <li>High-quality, durable fabrics for everyday wear.</li>
-            <li>Wide variety of sizes and styles available.</li>
-            <li>Cost-effective options for bulk orders.</li>
-            <li>Custom branding options for corporate needs.</li>
-        </ul>
+    <div class="nav-actions">
+      <button class="icon-btn theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
     </div>
-    </div>
-    <div class="supply-section">
-        <img src="images/fuelsupplies.jpg" alt="Fuel Supply">
-        <div class="service-content">
-            <h2>Fuel Supplies</h2>
-        <ul>
-            <li>Reliable and high-quality fuel sources.</li>
-            <li>Bulk supply options for businesses.</li>
-            <li>Environmentally friendly alternatives available.</li>
-            <li>Prompt delivery to your location.</li>
-        </ul>
-    </div>
+  </div>
+</header>
+
+<section class="page-hero" style="--hero-img:url('images/stationerysupplies.jpg')">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size:.65rem"></i> <span>Supplies</span></div>
+    <div class="eyebrow"><i class="fas fa-boxes-stacked"></i> What We Supply</div>
+    <h1>Our Supplies</h1>
+    <p>Quality, bulk-ready supplies for individuals, schools and businesses — clothing, fuel and stationery, delivered reliably.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="filter-bar reveal">
+      <button class="chip active" data-filter="all">All Supplies</button>
+      <button class="chip" data-filter="clothing">Clothing</button>
+      <button class="chip" data-filter="fuel">Fuel</button>
+      <button class="chip" data-filter="stationery">Stationery</button>
     </div>
 
-    <div class="supply-section">
-        <img src="images/stationerysupplies.jpg" alt="Stationery Supply">
-        <div class="service-content">
-        <h2>Stationery Supplies</h2>
+    <div class="grid grid-3">
+      <div class="card media-card reveal" data-category="clothing">
+        <div class="media"><span class="tag">Bulk Orders</span><img src="images/clothingsupplies.jpg" alt="Clothing Supply"></div>
+        <div class="body">
+          <h3>Clothing Supplies</h3>
+          <ul>
+            <li>High-quality, durable fabrics for everyday wear</li>
+            <li>Wide variety of sizes and styles available</li>
+            <li>Cost-effective options for bulk orders</li>
+            <li>Custom branding options for corporate needs</li>
+          </ul>
+          <a href="contact.html?service=Clothing%20Supplies" class="btn btn-dark btn-sm">Request Quote <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="card media-card reveal reveal-delay-1" data-category="fuel">
+        <div class="media"><span class="tag">Fast Delivery</span><img src="images/fuelsupplies.jpg" alt="Fuel Supply"></div>
+        <div class="body">
+          <h3>Fuel Supplies</h3>
+          <ul>
+            <li>Reliable and high-quality fuel sources</li>
+            <li>Bulk supply options for businesses</li>
+            <li>Environmentally friendly alternatives available</li>
+            <li>Prompt delivery to your location</li>
+          </ul>
+          <a href="contact.html?service=Fuel%20Supplies" class="btn btn-dark btn-sm">Request Quote <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="card media-card reveal reveal-delay-2" data-category="stationery">
+        <div class="media"><span class="tag">Schools &amp; Offices</span><img src="images/stationerysupplies.jpg" alt="Stationery Supply"></div>
+        <div class="body">
+          <h3>Stationery Supplies</h3>
+          <ul>
+            <li>Comprehensive range of office and school supplies</li>
+            <li>High-quality paper, writing tools, and accessories</li>
+            <li>Affordable bulk purchase options</li>
+            <li>Fast and reliable delivery services</li>
+          </ul>
+          <a href="contact.html?service=Stationery%20Supplies" class="btn btn-dark btn-sm">Request Quote <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Why Order From Us</div>
+      <h2>Built For Bulk, Backed By Service</h2>
+    </div>
+    <div class="grid grid-4">
+      <div class="card icon-card reveal">
+        <div class="icon-wrap"><i class="fas fa-tags"></i></div>
+        <h3>Competitive Pricing</h3>
+        <p>Cost-effective rates on bulk and repeat orders.</p>
+      </div>
+      <div class="card icon-card reveal reveal-delay-1">
+        <div class="icon-wrap"><i class="fas fa-truck"></i></div>
+        <h3>Reliable Delivery</h3>
+        <p>On-time drop-off wherever your business operates.</p>
+      </div>
+      <div class="card icon-card reveal reveal-delay-2">
+        <div class="icon-wrap"><i class="fas fa-stamp"></i></div>
+        <h3>Custom Branding</h3>
+        <p>Branding options available on select clothing orders.</p>
+      </div>
+      <div class="card icon-card reveal reveal-delay-3">
+        <div class="icon-wrap"><i class="fas fa-recycle"></i></div>
+        <h3>Sustainable Options</h3>
+        <p>Environmentally conscious alternatives, where available.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <h2>Ready to Place a Bulk Order?</h2>
+      <p>Tell us what you need — quantities, timelines, and delivery location — and we'll send a fast, fair quote.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+        <a href="tel:0645052676" class="btn btn-outline"><i class="fas fa-phone"></i> Call Us Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" style="margin-bottom:1rem;">
+          <img src="images/company-logo.jpg" alt="GNT MAK Holdings logo">
+          <span class="brand-text"><strong>GNT MAK Holdings</strong><span>Services &amp; Supplies</span></span>
+        </a>
+        <p>Your one-stop solution for professional services and quality supplies in Durban.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
         <ul>
-            <li>Comprehensive range of office and school supplies.</li>
-            <li>High-quality paper, writing tools, and accessories.</li>
-            <li>Affordable bulk purchase options.</li>
-            <li>Fast and reliable delivery services.</li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="supplies.html">Supplies</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
+      </div>
+      <div>
+        <h4>Supplies</h4>
+        <ul>
+          <li><a href="supplies.html">Clothing</a></li>
+          <li><a href="supplies.html">Fuel</a></li>
+          <li><a href="supplies.html">Stationery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fas fa-phone"></i> 064 855 6323 / 064 505 2676</li>
+          <li><i class="fas fa-envelope"></i> info@gntmakholdings.co.za</li>
+          <li><i class="fas fa-location-dot"></i> 15 Kildare Road, Berea, Durban, 4000</li>
+        </ul>
+      </div>
     </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="footer-year"></span> GNT MAK Holdings — Services &amp; Supplies. All Rights Reserved.</p>
+      <div class="footer-socials">
+        <a href="mailto:gntmakhanya@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="tel:0648556323" aria-label="Call"><i class="fas fa-phone"></i></a>
+      </div>
     </div>
+  </div>
+</footer>
+
+<div class="floating-actions">
+  <a href="https://wa.me/27648556323" target="_blank" rel="noopener" class="fab fab-whatsapp" aria-label="WhatsApp us"><i class="fab fa-whatsapp"></i></a>
+  <a href="tel:0648556323" class="fab fab-call" aria-label="Call us"><i class="fas fa-phone"></i></a>
+  <button class="fab fab-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>

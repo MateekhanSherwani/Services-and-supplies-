@@ -1,110 +1,205 @@
-<!-- services.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover a comprehensive range of professional services including cleaning, plumbing, and grass cutting.">
-    <title>Our Services</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background: #1f1f1f;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav {
-            background: #333;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0.5rem;
-            padding: 1rem;
-            text-decoration: none;
-            display: inline-block;
-        }
-        nav a:hover {
-            background: #575757;
-            border-radius: 5px;
-        }
-        .service-section {
-            display: flex;
-            gap: 2rem;
-            margin: 2rem;
-            background: #ffffff;
-            border-radius: 8px;
-            padding: 1rem;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .service-section img {
-            max-width: 200px;
-            border-radius: 8px;
-        }
-        .service-content {
-            flex: 1;
-        }
-        h2 {
-            color: #1f1f1f;
-        }
-        ul {
-            list-style-type: square;
-        }
-    
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professional cleaning, grass cutting and plumbing services from GNT MAK Holdings — trained staff, flexible scheduling, and dependable results.">
+<title>Our Services | GNT MAK Holdings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Our Services</h1>
+
+<div class="preloader"><div class="spinner"></div></div>
+<div class="scroll-progress"></div>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="images/company-logo.jpg" alt="GNT MAK Holdings logo">
+      <span class="brand-text"><strong>GNT MAK Holdings</strong><span>Services &amp; Supplies</span></span>
+    </a>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="supplies.html">Supplies</a>
-        <a href="contact.html">Contact Us</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="service.html" class="active">Services</a></li>
+        <li><a href="supplies.html">Supplies</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
- <div class="service-section">
-        <img src="images/cleaning.jpg" alt="Cleaning Service">
-        <div class="service-content">
-            <h2>Cleaning Services</h2>
-            <ul>
-                <li>High-quality cleaning solutions</li>
-                <li>Trained and professional staff</li>
-                <li>Flexible scheduling options</li>
-                <li>Eco-friendly cleaning products</li>
-            </ul>
-        </div>
+    <div class="nav-actions">
+      <button class="icon-btn theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
     </div>
- <div class="service-section">
-        <img src="images/grasscutting.jpg" alt="Grass Cuttings Service">
-        <div class="service-content">
-            <h2>Grass Cutting</h2>
-            <ul>
-                <li>Neat and precise lawn care</li>
-                <li>State-of-the-art equipment</li>
-                <li>One-time or recurring services</li>
-                <li>Efficient and timely service</li>
-            </ul>
-        </div>
+  </div>
+</header>
+
+<section class="page-hero" style="--hero-img:url('images/cleaning.jpg')">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size:.65rem"></i> <span>Services</span></div>
+    <div class="eyebrow"><i class="fas fa-list-check"></i> What We Do</div>
+    <h1>Our Services</h1>
+    <p>Reliable, professional service delivery for homes and businesses — cleaning, grass cutting, and plumbing, done right the first time.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="card media-card row reveal" style="margin-bottom:2.2rem;">
+      <div class="media"><img src="images/cleaning.jpg" alt="Cleaning Service"></div>
+      <div class="body">
+        <div class="eyebrow">Most Requested</div>
+        <h2>Cleaning Services</h2>
+        <p>Spotless spaces, every visit — for homes, offices and commercial sites.</p>
+        <ul>
+          <li>High-quality cleaning solutions</li>
+          <li>Trained and professional staff</li>
+          <li>Flexible scheduling options</li>
+          <li>Eco-friendly cleaning products</li>
+        </ul>
+        <div class="badge-list"><span>Office Cleaning</span><span>Deep Cleaning</span><span>Move-in / Move-out</span></div>
+        <a href="contact.html?service=Cleaning%20Services" class="btn btn-primary" style="margin-top:1.4rem;">Get a Quote <i class="fas fa-arrow-right"></i></a>
+      </div>
     </div>
 
-    <div class="service-section">
-        <img src="images/plumbing.jpg" alt="Plumbing Service">
-        <div class="service-content">
-            <h2>Plumbing Services</h2>
-            <ul>
-                <li>Expert troubleshooting and repair</li>
-                <li>Emergency services available</li>
-                <li>Installation of fixtures and appliances</li>
-                <li>Affordable and reliable solutions</li>
-            </ul>
-        </div>
+    <div class="card media-card row reverse reveal" style="margin-bottom:2.2rem;">
+      <div class="media"><img src="images/grasscutting.jpg" alt="Grass Cutting Service"></div>
+      <div class="body">
+        <div class="eyebrow">Seasonal Favorite</div>
+        <h2>Grass Cutting</h2>
+        <p>Keep your lawn and grounds looking sharp all year round.</p>
+        <ul>
+          <li>Neat and precise lawn care</li>
+          <li>State-of-the-art equipment</li>
+          <li>One-time or recurring services</li>
+          <li>Efficient and timely service</li>
+        </ul>
+        <div class="badge-list"><span>Residential Lawns</span><span>Commercial Grounds</span><span>Recurring Plans</span></div>
+        <a href="contact.html?service=Grass%20Cutting" class="btn btn-primary" style="margin-top:1.4rem;">Get a Quote <i class="fas fa-arrow-right"></i></a>
+      </div>
     </div>
 
+    <div class="card media-card row reveal">
+      <div class="media"><img src="images/plumbing.jpg" alt="Plumbing Service"></div>
+      <div class="body">
+        <div class="eyebrow">24/7 Emergency</div>
+        <h2>Plumbing Services</h2>
+        <p>From leaky taps to full installations, handled by trusted hands.</p>
+        <ul>
+          <li>Expert troubleshooting and repair</li>
+          <li>Emergency services available</li>
+          <li>Installation of fixtures and appliances</li>
+          <li>Affordable and reliable solutions</li>
+        </ul>
+        <div class="badge-list"><span>Emergency Repairs</span><span>Installations</span><span>Maintenance</span></div>
+        <a href="contact.html?service=Plumbing%20Services" class="btn btn-primary" style="margin-top:1.4rem;">Get a Quote <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">How It Works</div>
+      <h2>Our Simple Process</h2>
+      <p>From first contact to job done — a straightforward process every time.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="dot">1</div>
+        <h3>Get In Touch</h3>
+        <p>Send us your requirements via call, WhatsApp or the contact form.</p>
+      </div>
+      <div class="timeline-item reveal reveal-delay-1">
+        <div class="dot">2</div>
+        <h3>Free Quotation</h3>
+        <p>We assess your needs and provide a clear, no-obligation quote.</p>
+      </div>
+      <div class="timeline-item reveal reveal-delay-2">
+        <div class="dot">3</div>
+        <h3>Scheduled Service</h3>
+        <p>Our trained team arrives on time, fully equipped for the job.</p>
+      </div>
+      <div class="timeline-item reveal reveal-delay-3">
+        <div class="dot">4</div>
+        <h3>Quality Check &amp; Follow-Up</h3>
+        <p>We confirm you're satisfied — and stay available for anything else you need.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <h2>Need a Service Today?</h2>
+      <p>Tell us what you need and we'll get back to you with a fast, fair quote.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+        <a href="tel:0648556323" class="btn btn-outline"><i class="fas fa-phone"></i> Call Us Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" style="margin-bottom:1rem;">
+          <img src="images/company-logo.jpg" alt="GNT MAK Holdings logo">
+          <span class="brand-text"><strong>GNT MAK Holdings</strong><span>Services &amp; Supplies</span></span>
+        </a>
+        <p>Your one-stop solution for professional services and quality supplies in Durban.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="supplies.html">Supplies</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="service.html">Cleaning</a></li>
+          <li><a href="service.html">Grass Cutting</a></li>
+          <li><a href="service.html">Plumbing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fas fa-phone"></i> 064 855 6323 / 064 505 2676</li>
+          <li><i class="fas fa-envelope"></i> info@gntmakholdings.co.za</li>
+          <li><i class="fas fa-location-dot"></i> 15 Kildare Road, Berea, Durban, 4000</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="footer-year"></span> GNT MAK Holdings — Services &amp; Supplies. All Rights Reserved.</p>
+      <div class="footer-socials">
+        <a href="mailto:gntmakhanya@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="tel:0648556323" aria-label="Call"><i class="fas fa-phone"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="floating-actions">
+  <a href="https://wa.me/27648556323" target="_blank" rel="noopener" class="fab fab-whatsapp" aria-label="WhatsApp us"><i class="fab fa-whatsapp"></i></a>
+  <a href="tel:0648556323" class="fab fab-call" aria-label="Call us"><i class="fas fa-phone"></i></a>
+  <button class="fab fab-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
-
-       

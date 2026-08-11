@@ -1,71 +1,80 @@
-<!-- welcome.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to Services & Supplies — your trusted partner for professional services and quality supplies, including cleaning, grass cutting, plumbing, and much more.">
-    <meta name="keywords" content="cleaning services, plumbing, grass cutting, clothing supplies, stationery, fuel, professional services">
-    <meta name="author" content="Services & Supplies Company">
-    <title>Welcome to Services & Supplies</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f3f3f3;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-        .welcome-container {
-            background: rgba(242, 233, 233, 0.712);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
-            animation: fadeIn 1s ease-in-out;
-            margin-top: 5vh;
-        }
-        .logo {
-            max-width: 880x;
-            margin-bottom: 1rem;
-        }
-        h1 {
-            color: black;
-            font-size: 2.5rem;
-        }
-        p {
-            color: #333;
-            margin-bottom: 2rem;
-        }
-        .button-group {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-        a {
-            background: black;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        a:hover {
-            background: #575757;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Welcome to GNT MAK Holdings — your trusted partner for professional services and quality supplies, including cleaning, grass cutting, plumbing, and much more.">
+<meta name="keywords" content="cleaning services, plumbing, grass cutting, clothing supplies, stationery, fuel, professional services">
+<meta name="author" content="GNT MAK Holdings">
+<title>Welcome | GNT MAK Holdings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(160deg, rgba(6,10,20,.94), rgba(15,23,42,.9)), url('images/gntholding.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .welcome-card {
+    position: relative;
+    z-index: 2;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.14);
+    backdrop-filter: blur(16px);
+    padding: 3rem 2.6rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    max-width: 480px;
+    margin: 1.2rem;
+    animation: cardIn 1s var(--ease);
+  }
+  @keyframes cardIn { from { opacity: 0; transform: translateY(30px) scale(.96); } to { opacity: 1; transform: none; } }
+  .welcome-card .logo {
+    width: 92px; height: 92px; border-radius: 20px; object-fit: cover;
+    margin: 0 auto 1.4rem; box-shadow: 0 10px 30px rgba(0,0,0,.4);
+    animation: float 6s ease-in-out infinite;
+  }
+  .welcome-card h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); color: #fff; }
+  .welcome-card .highlight { color: var(--accent); }
+  .welcome-card p { color: rgba(255,255,255,.78); }
+  .welcome-actions { display: flex; flex-direction: column; gap: .8rem; margin-top: 1.6rem; }
+  .welcome-tags { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; margin-top: 1.6rem; }
+  .welcome-tags span {
+    font-size: .74rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+    background: rgba(255,255,255,.1); padding: .4rem .8rem; border-radius: 999px; color: rgba(255,255,255,.85);
+  }
+</style>
 </head>
 <body>
-    <div class="welcome-container">
-        <img src="images/company-logo.jpg" alt="Company Logo" class="logo">
-        <h1>Welcome to GNT MAK HOLDINGS</h1>
-        <p>Your one-stop solution for professional services and quality supplies.</p>
-        <div class="button-group">
-            <a href="index.html">Enter Website</a>
-           </div>
-        </div>
+
+<div class="preloader"><div class="spinner"></div></div>
+<div class="blob blob-1" style="position:fixed"></div>
+<div class="blob blob-2" style="position:fixed"></div>
+
+<div class="welcome-card">
+  <img src="images/company-logo.jpg" alt="Company Logo" class="logo">
+  <div class="eyebrow"><i class="fas fa-sparkles"></i> Welcome</div>
+  <h1>GNT <span class="highlight">MAK</span> Holdings</h1>
+  <p>Your one-stop solution for professional services and quality supplies — cleaning, plumbing, grass cutting, clothing, fuel and stationery.</p>
+  <div class="welcome-actions">
+    <a href="index.html" class="btn btn-primary"><i class="fas fa-door-open"></i> Enter Website</a>
+    <a href="contact.html" class="btn btn-outline"><i class="fas fa-phone"></i> Request a Quote</a>
+  </div>
+  <div class="welcome-tags">
+    <span>Cleaning</span><span>Plumbing</span><span>Grass Cutting</span><span>Supplies</span>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>

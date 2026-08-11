@@ -1,100 +1,212 @@
-<!-- contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background: #f3f3f3;
-            background-image: url('images/gntholding.jpg');
-            background-size: cover; /* Cover the entire page */
-            background-repeat: repeat;
-            height: 100vh; /* Full height */
-            margin: 0; /* Remove default margin */
-        }
-        header {
-            background: #1f1f1f;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav {
-            background: #333;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0.5rem;
-            padding: 1rem;
-            text-decoration: none;
-            display: inline-block;
-        }
-        nav a:hover {
-            background: #575757;
-            border-radius: 5px;
-        }
-        .contact-section {
-            padding: 2rem;
-            max-width: 800px;
-            margin: auto;
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
-        }
-        label {
-            display: block;
-            margin: 1rem 0 0.5rem;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        button {
-            background: #1f1f1f;
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            cursor: pointer;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-        button:hover {
-            background: #333;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Get in touch with GNT MAK Holdings for a free quote on cleaning, plumbing, grass cutting, or clothing, fuel and stationery supplies.">
+<title>Contact Us | GNT MAK Holdings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Contact Us</h1>
-    </header>
+
+<div class="preloader"><div class="spinner"></div></div>
+<div class="scroll-progress"></div>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="images/company-logo.jpg" alt="GNT MAK Holdings logo">
+      <span class="brand-text"><strong>GNT MAK Holdings</strong><span>Services &amp; Supplies</span></span>
+    </a>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="service.html">Services</a>
-        <a href="supplies.html">Supplies</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="supplies.html">Supplies</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
     </nav>
-    <div class="contact-section">
-        <h2>Get in Touch</h2>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
+    <div class="nav-actions">
+      <button class="icon-btn theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
     </div>
+  </div>
+</header>
+
+<section class="page-hero" style="--hero-img:url('images/gntholding.jpg')">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size:.65rem"></i> <span>Contact</span></div>
+    <div class="eyebrow"><i class="fas fa-comments"></i> Let's Talk</div>
+    <h1>Contact Us</h1>
+    <p>Have a question or need a quote? Send us a message and our team will get back to you shortly.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="reveal">
+        <div class="info-card">
+          <div class="icon-wrap"><i class="fas fa-phone"></i></div>
+          <div><h4>Phone</h4><p>064 855 6323 &nbsp;|&nbsp; 064 505 2676</p></div>
+        </div>
+        <div class="info-card">
+          <div class="icon-wrap"><i class="fas fa-envelope"></i></div>
+          <div><h4>Email</h4><p>info@gntmakholdings.co.za<br>quotations@gntmakholdings.co.za</p></div>
+        </div>
+        <div class="info-card">
+          <div class="icon-wrap"><i class="fas fa-location-dot"></i></div>
+          <div><h4>Address</h4><p>15 Kildare Road, Berea, Durban, 4000</p></div>
+        </div>
+        <div class="info-card">
+          <div class="icon-wrap"><i class="fas fa-clock"></i></div>
+          <div><h4>Working Hours</h4><p>Monday – Friday: 8 AM – 4 PM</p></div>
+        </div>
+
+        <div class="social-row">
+          <a href="mailto:gntmakhanya@gmail.com" class="social-pill"><i class="fas fa-envelope"></i> Email Us</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="social-pill"><i class="fab fa-facebook"></i> Follow on Facebook</a>
+          <a href="https://wa.me/27648556323" target="_blank" rel="noopener" class="social-pill"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+        </div>
+
+        <div class="map-wrap">
+          <iframe title="Our location" loading="lazy"
+            src="https://www.google.com/maps?q=15+Kildare+Road,+Berea,+Durban,+4000&output=embed"></iframe>
+        </div>
+      </div>
+
+      <div class="form-card reveal reveal-delay-1">
+        <h2>Send Us a Message</h2>
+        <p class="form-note">Fields marked required will open your email app pre-filled with your message, ready to send.</p>
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required>
+              <div class="error-msg">Please enter your name.</div>
+            </div>
+            <div class="field">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+              <div class="error-msg">Please enter a valid email address.</div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="Optional">
+            </div>
+            <div class="field">
+              <label for="service-select">I'm Interested In</label>
+              <select id="service-select" name="service">
+                <option value="General Enquiry">General Enquiry</option>
+                <option value="Cleaning Services">Cleaning Services</option>
+                <option value="Grass Cutting">Grass Cutting</option>
+                <option value="Plumbing Services">Plumbing Services</option>
+                <option value="Clothing Supplies">Clothing Supplies</option>
+                <option value="Fuel Supplies">Fuel Supplies</option>
+                <option value="Stationery Supplies">Stationery Supplies</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <div class="error-msg">Please tell us a bit about what you need.</div>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+          <div class="form-success"><i class="fas fa-circle-check"></i> Thanks! Your email app is opening with your message ready to send.</div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div style="max-width:760px;margin:0 auto;">
+      <div class="accordion-item reveal">
+        <div class="accordion-head">How quickly can you respond to a quote request? <i class="fas fa-plus"></i></div>
+        <div class="accordion-body"><p>We typically respond within one business day, often sooner for urgent plumbing call-outs.</p></div>
+      </div>
+      <div class="accordion-item reveal">
+        <div class="accordion-head">Do you offer recurring service plans? <i class="fas fa-plus"></i></div>
+        <div class="accordion-body"><p>Yes — cleaning and grass cutting are both available on weekly, bi-weekly or monthly schedules.</p></div>
+      </div>
+      <div class="accordion-item reveal">
+        <div class="accordion-head">Can supplies be ordered in bulk for businesses or schools? <i class="fas fa-plus"></i></div>
+        <div class="accordion-body"><p>Absolutely. Clothing, fuel and stationery are all available with bulk pricing and scheduled delivery.</p></div>
+      </div>
+      <div class="accordion-item reveal">
+        <div class="accordion-head">What areas do you service? <i class="fas fa-plus"></i></div>
+        <div class="accordion-body"><p>We're based in Berea, Durban, and service the greater Durban metro area — contact us to confirm your location.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" style="margin-bottom:1rem;">
+          <img src="images/company-logo.jpg" alt="GNT MAK Holdings logo">
+          <span class="brand-text"><strong>GNT MAK Holdings</strong><span>Services &amp; Supplies</span></span>
+        </a>
+        <p>Your one-stop solution for professional services and quality supplies in Durban.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="supplies.html">Supplies</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="service.html">Cleaning</a></li>
+          <li><a href="service.html">Grass Cutting</a></li>
+          <li><a href="service.html">Plumbing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fas fa-phone"></i> 064 855 6323 / 064 505 2676</li>
+          <li><i class="fas fa-envelope"></i> info@gntmakholdings.co.za</li>
+          <li><i class="fas fa-location-dot"></i> 15 Kildare Road, Berea, Durban, 4000</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="footer-year"></span> GNT MAK Holdings — Services &amp; Supplies. All Rights Reserved.</p>
+      <div class="footer-socials">
+        <a href="mailto:gntmakhanya@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="tel:0648556323" aria-label="Call"><i class="fas fa-phone"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="floating-actions">
+  <a href="https://wa.me/27648556323" target="_blank" rel="noopener" class="fab fab-whatsapp" aria-label="WhatsApp us"><i class="fab fa-whatsapp"></i></a>
+  <a href="tel:0648556323" class="fab fab-call" aria-label="Call us"><i class="fas fa-phone"></i></a>
+  <button class="fab fab-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
