@@ -38,11 +38,13 @@
     if (!loader) return;
     var spinner = loader.querySelector(".spinner");
     if (spinner) {
-      var logo = document.createElement("img");
-      logo.className = "preloader-logo";
-      logo.src = "images/company-logo.jpg";
-      logo.alt = "";
-      loader.appendChild(logo);
+      loader.insertAdjacentHTML("beforeend",
+        '<svg class="preloader-logo" viewBox="0 0 100 100" aria-hidden="true">' +
+        '<rect width="100" height="100" rx="24" class="mark-bg"></rect>' +
+        '<path d="M50 20 L67 44 L33 44 Z" class="mark-peak"></path>' +
+        '<rect x="40" y="44" width="20" height="36" rx="5" class="mark-bar"></rect>' +
+        "</svg>"
+      );
     }
     window.addEventListener("load", function () {
       setTimeout(function () { loader.classList.add("loaded"); }, 250);

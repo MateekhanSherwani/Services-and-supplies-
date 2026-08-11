@@ -116,8 +116,8 @@
     border: 1.5px dashed rgba(255,255,255,.35);
     animation: spin 14s linear infinite;
   }
-  .welcome-card .logo {
-    width: 92px; height: 92px; border-radius: 20px; object-fit: cover;
+  .welcome-card .logo-mark {
+    width: 92px; height: 92px;
     box-shadow: 0 10px 30px rgba(0,0,0,.4);
     animation: float 6s ease-in-out infinite;
   }
@@ -190,7 +190,11 @@
 
   <div class="welcome-card">
     <div class="logo-ring">
-      <img src="images/company-logo.jpg" alt="GNT MAK Holdings logo" class="logo">
+      <svg class="logo-mark" viewBox="0 0 100 100" role="img" aria-label="GNT MAK Holdings logo">
+        <rect width="100" height="100" rx="24" class="mark-bg"></rect>
+        <path d="M50 20 L67 44 L33 44 Z" class="mark-peak"></path>
+        <rect x="40" y="44" width="20" height="36" rx="5" class="mark-bar"></rect>
+      </svg>
     </div>
     <h1>GNT <span class="highlight">MAK</span> Holdings</h1>
     <div class="subtitle">Services &amp; Supplies</div>

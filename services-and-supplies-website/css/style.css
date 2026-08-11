@@ -133,11 +133,13 @@ li { margin-bottom: .5rem; color: var(--text-muted); }
 .preloader-logo {
   position: absolute; top: 50%; left: 50%;
   width: 42px; height: 42px;
-  border-radius: 11px;
-  object-fit: cover;
+  border-radius: 22%;
   transform: translate(-50%, -50%);
   animation: pulseLogo 1.3s ease-in-out infinite;
 }
+.preloader-logo .mark-bg { fill: #0a0a0a; }
+.preloader-logo .mark-peak { fill: #ffffff; }
+.preloader-logo .mark-bar { fill: #ffffff; fill-opacity: .5; }
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes pulseLogo { 0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: .85; } 50% { transform: translate(-50%, -50%) scale(1.14); opacity: 1; } }
 
@@ -239,7 +241,15 @@ html.has-custom-cursor, html.has-custom-cursor a, html.has-custom-cursor button,
 .navbar .container { display: flex; align-items: center; justify-content: space-between; width: 100%; }
 
 .brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
-.brand img { width: 42px; height: 42px; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 14px rgba(0,0,0,.35); }
+.brand-mark, .logo-mark {
+  display: block; flex: none;
+  border-radius: 22%;
+  box-shadow: 0 4px 14px rgba(0,0,0,.35);
+}
+.brand-mark { width: 42px; height: 42px; }
+.brand-mark .mark-bg, .logo-mark .mark-bg { fill: #0a0a0a; }
+.brand-mark .mark-peak, .logo-mark .mark-peak { fill: #ffffff; }
+.brand-mark .mark-bar, .logo-mark .mark-bar { fill: #ffffff; fill-opacity: .5; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
 .brand-text strong { color: #fff; font-family: var(--font-head); font-size: 1.05rem; letter-spacing: .02em; }
 .brand-text span { color: var(--accent); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; }
