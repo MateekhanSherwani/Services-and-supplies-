@@ -7,6 +7,9 @@
 
   document.addEventListener("DOMContentLoaded", init);
 
+  var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var isFinePointer = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
   function init() {
     initPreloader();
     initScrollProgress();
@@ -21,14 +24,205 @@
     initBackToTop();
     initFooterYear();
     initQuotePrefill();
+    initHeroTextReveal();
+    initParallaxBlobs();
+    initHeroTilt();
+    initCustomCursor();
+    initMagneticButtons();
+    initPageTransitions();
   }
 
   /* ---------------- Preloader ---------------- */
   function initPreloader() {
     var loader = document.querySelector(".preloader");
     if (!loader) return;
+    var spinner = loader.querySelector(".spinner");
+    if (spinner) {
+      var logo = document.createElement("img");
+      logo.className = "preloader-logo";
+      logo.src = "images/company-logo.jpg";
+      logo.alt = "";
+      loader.appendChild(logo);
+    }
     window.addEventListener("load", function () {
       setTimeout(function () { loader.classList.add("loaded"); }, 250);
+    });
+  }
+
+  /* ---------------- Hero heading word-reveal ---------------- */
+  function initHeroTextReveal() {
+    var heading = document.querySelector(".hero-content h1");
+    if (!heading || prefersReducedMotion) return;
+
+    var nodes = Array.prototype.slice.call(heading.childNodes);
+    var frag = document.createDocumentFragment();
+    var wordIndex = 0;
+
+    nodes.forEach(function (node) {
+      if (node.nodeType === Node.TEXT_NODE) {
+        var parts = node.textContent.split(/(\s+)/);
+        parts.forEach(function (part) {
+          if (part === "") return;
+          if (/^\s+$/.test(part)) {
+            frag.appendChild(document.createTextNode(part));
+            return;
+          }
+          var mask = document.createElement("span");
+          mask.className = "word-mask";
+          var inner = document.createElement("span");
+          inner.className = "word-inner";
+          inner.style.animationDelay = (wordIndex * 0.07) + "s";
+          inner.textContent = part;
+          mask.appendChild(inner);
+          frag.appendChild(mask);
+          wordIndex++;
+        });
+      } else if (node.nodeType === Node.ELEMENT_NODE) {
+        var mask2 = document.createElement("span");
+        mask2.className = "word-mask";
+        node.classList.add("word-inner");
+        node.style.animationDelay = (wordIndex * 0.07) + "s";
+        mask2.appendChild(node);
+        frag.appendChild(mask2);
+        wordIndex++;
+      }
+    });
+
+    heading.innerHTML = "";
+    heading.appendChild(frag);
+  }
+
+  /* ---------------- Hero blob parallax ---------------- */
+  function initParallaxBlobs() {
+    if (!isFinePointer || prefersReducedMotion) return;
+    var hero = document.querySelector(".hero");
+    var layer = hero ? hero.querySelector(".hero-parallax") : null;
+    if (!hero || !layer) return;
+
+    hero.addEventListener("mousemove", function (e) {
+      var rect = hero.getBoundingClientRect();
+      var x = (e.clientX - rect.left) / rect.width - 0.5;
+      var y = (e.clientY - rect.top) / rect.height - 0.5;
+      layer.style.transform = "translate(" + (x * 34) + "px," + (y * 34) + "px)";
+    }, { passive: true });
+
+    hero.addEventListener("mouseleave", function () {
+      layer.style.transform = "";
+    });
+  }
+
+  /* ---------------- Hero visual tilt + spotlight ---------------- */
+  function initHeroTilt() {
+    if (!isFinePointer || prefersReducedMotion) return;
+    var frame = document.querySelector(".hero-visual-frame");
+    if (!frame) return;
+
+    frame.addEventListener("mousemove", function (e) {
+      var rect = frame.getBoundingClientRect();
+      var px = (e.clientX - rect.left) / rect.width;
+      var py = (e.clientY - rect.top) / rect.height;
+      var rx = (0.5 - py) * 14;
+      var ry = (px - 0.5) * 16;
+      frame.style.transform = "perspective(900px) rotateX(" + rx + "deg) rotateY(" + ry + "deg) scale(1.02)";
+      frame.style.setProperty("--mx", (px * 100) + "%");
+      frame.style.setProperty("--my", (py * 100) + "%");
+    });
+
+    frame.addEventListener("mouseleave", function () {
+      frame.style.transform = "";
+    });
+  }
+
+  /* ---------------- Custom magnetic cursor ---------------- */
+  function initCustomCursor() {
+    if (!isFinePointer || prefersReducedMotion) return;
+
+    var dot = document.createElement("div");
+    dot.className = "cursor-dot";
+    var ring = document.createElement("div");
+    ring.className = "cursor-ring";
+    var label = document.createElement("span");
+    label.className = "cursor-label";
+    ring.appendChild(label);
+    document.body.appendChild(dot);
+    document.body.appendChild(ring);
+    document.documentElement.classList.add("has-custom-cursor");
+
+    var mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+    var ringX = mouseX, ringY = mouseY;
+
+    window.addEventListener("mousemove", function (e) {
+      mouseX = e.clientX; mouseY = e.clientY;
+      dot.style.transform = "translate(" + mouseX + "px," + mouseY + "px) translate(-50%,-50%)";
+    }, { passive: true });
+
+    (function loop() {
+      ringX += (mouseX - ringX) * 0.18;
+      ringY += (mouseY - ringY) * 0.18;
+      ring.style.transform = "translate(" + ringX + "px," + ringY + "px) translate(-50%,-50%)";
+      requestAnimationFrame(loop);
+    })();
+
+    document.addEventListener("mouseover", function (e) {
+      var target = e.target.closest ? e.target.closest("a, button, .btn, .chip, .card, .icon-btn") : null;
+      if (!target) return;
+      var cursorText = target.getAttribute("data-cursor");
+      if (cursorText) {
+        label.textContent = cursorText;
+        ring.classList.add("is-label");
+      } else {
+        ring.classList.add("is-hover");
+      }
+    });
+    document.addEventListener("mouseout", function (e) {
+      var target = e.target.closest ? e.target.closest("a, button, .btn, .chip, .card, .icon-btn") : null;
+      if (!target) return;
+      ring.classList.remove("is-hover", "is-label");
+      label.textContent = "";
+    });
+  }
+
+  /* ---------------- Magnetic buttons ---------------- */
+  function initMagneticButtons() {
+    if (!isFinePointer || prefersReducedMotion) return;
+    var items = document.querySelectorAll(".btn, .fab, .icon-btn");
+    items.forEach(function (el) {
+      el.addEventListener("mousemove", function (e) {
+        var rect = el.getBoundingClientRect();
+        var x = e.clientX - rect.left - rect.width / 2;
+        var y = e.clientY - rect.top - rect.height / 2;
+        el.style.transform = "translate(" + (x * 0.25) + "px," + (y * 0.3) + "px)";
+      });
+      el.addEventListener("mouseleave", function () {
+        el.style.transform = "";
+      });
+    });
+  }
+
+  /* ---------------- Smooth page transitions ---------------- */
+  function initPageTransitions() {
+    if (prefersReducedMotion) return;
+    var overlay = document.createElement("div");
+    overlay.className = "page-transition-overlay";
+    document.body.appendChild(overlay);
+
+    document.addEventListener("click", function (e) {
+      var link = e.target.closest ? e.target.closest("a[href]") : null;
+      if (!link) return;
+      if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+      if (link.target && link.target !== "_self") return;
+
+      var href = link.getAttribute("href");
+      if (!href || href.indexOf("#") === 0 || /^(https?:|mailto:|tel:|javascript:)/i.test(href)) return;
+      if (link.hostname && link.hostname !== window.location.hostname) return;
+
+      e.preventDefault();
+      overlay.classList.add("active");
+      setTimeout(function () { window.location.href = href; }, 420);
+    });
+
+    window.addEventListener("pageshow", function (e) {
+      if (e.persisted) overlay.classList.remove("active");
     });
   }
 
